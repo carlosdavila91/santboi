@@ -108,7 +108,9 @@ Histograma_Log10(df, df$sup_fachadas) +
 ggsave("../images/supl10_fachadas.png")
 
 ## Tipo de cubierta ------
-BarrasPlot(df, df$tipo_cubierta)
+BarrasPlot(df, df$tipo_cubierta) + 
+        labs(title = "Type of roof")
+ggsave("../images/cubiertas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_cubierta)
 

@@ -9,6 +9,10 @@ TablaResumen_Decreciente <- function(cat_var){
         tabla <- as.data.frame(t(tabla[,-1]))
         colnames(tabla) <- n
         rownames(tabla) <- ""
+        colnames(tabla) <- paste(colnames(t),"|",sep = "")
+        tabla[2,] <- tabla[1,]
+        tabla[2,] <- paste(tabla[2,],"|", sep = "")
+        tabla[1,] <- rep("---|", length(colnames(tabla)))
         tabla
 }
 
@@ -18,6 +22,10 @@ TablaResumen_Original <- function(cat_var){
         tabla <- as.data.frame(t(tabla[,-1]))
         colnames(tabla) <- n
         rownames(tabla) <- ""
+        colnames(tabla) <- paste(colnames(t),"|",sep = "")
+        tabla[2,] <- tabla[1,]
+        tabla[2,] <- paste(tabla[2,],"|", sep = "")
+        tabla[1,] <- rep("---|", length(colnames(tabla)))
         tabla
 }
 
