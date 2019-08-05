@@ -38,12 +38,12 @@ Data were collected from more than 800 buildings. An exploratory analysis of the
 
 ## Exploratory Data Analysis
 
-### District
+### District
 
 The study is oriented to the districts of Marianao and Vinyets, according to the conditions established by the municipality
 
 <p align="center">
-  <img width="640" height="300" src="images/barrio.png">
+  <img width="460" height="300" src="images/barrio.png">
 </p>
 
 MARIANAO| VINYETS
