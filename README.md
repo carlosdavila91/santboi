@@ -15,7 +15,6 @@ There are several moments of history in which an explosion of the construction s
 The following data has been taken from IDAE[\[1\]](http://guiaenergia.idae.es/el-consumo-energia-en-espana/)
 
 <center>
-
 | Sector                                 | %             |
 | -------------------------------------- |--------------:|
 | Transportation                         | 41,7          |
@@ -23,7 +22,6 @@ The following data has been taken from IDAE[\[1\]](http://guiaenergia.idae.es/el
 | Households                             | 18,5          |
 | Services                               | 12,5          |
 | Agriculture, phishing and others       | 3,8           |
-
 </center>
 
 As it can be seen above, households are directly responsible of an 18,5% of the final energy consumption. An if we take into account that Services includes commerce, hostelry, offices, health and education, we can come to realize how much energy the building sector consumes.
@@ -50,4 +48,4 @@ Data were collected from more than 800 buildings. An exploratory analysis of the
 
 MARIANAO| VINYETS
 ---- | ----
-499 | 315 
+499 | 315
