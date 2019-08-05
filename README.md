@@ -100,7 +100,7 @@ Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings|
 
  Dwelling| Commercial| Storage| Industrial
  ---|---|---|---
-400 |       355|      41|         17
+400 | 355| 41| 17
 
 ### Type of façade
 
