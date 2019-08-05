@@ -71,3 +71,43 @@ It seems that this city suffered a vast growth during periods of strong internal
 N| S|   E|   O| SE |NE| NO| SO
 ---|---|---|---|---|---|---|---
 134| 131| 109| 106| 98| 86| 79| 71
+
+### Number of dwellings
+
+<p align="center">
+  <img width="640" height="420" src="images/viviendas.png">
+</p>
+
+Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings| From 20 to 39 dwellings| More than 40 dwellings
+---|---|---|---|---|---
+261|                   182|                   111|                     155|   82|                     22
+
+### Number of floors
+
+<p align="center">
+  <img width="640" height="420" src="images/plantas.png">
+</p>
+
+1|   2|   3|  4|   5|  6|  7|  8
+---|---|---|---|---|---|---|---
+ 67| 204| 107| 84| 207| 84| 50| 11
+
+### Use of the ground floor
+
+<p align="center">
+  <img width="640" height="420" src="images/pbaja.png">
+</p>
+
+ Dwelling| Commercial| Storage| Industrial
+ ---|---|---|---
+400 |       355|      41|         17
+
+### Type of façade
+
+<p align="center">
+  <img width="640" height="420" src="images/fachadas.png">
+</p>
+
+F1| F2|  F3
+---|---|---
+ 468| 47| 299

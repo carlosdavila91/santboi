@@ -59,31 +59,42 @@ TablaResumen_Original(df$decada)
 ## Orientacion -------
 p3 <- BarrasPlot_Ordenado(df, df$orientacion_ppal)
 p3 + labs(title = "Main orientation of the building")
+ggsave("../images/orientacion.png")
 # Tabla resumen
 TablaResumen_Decreciente(df$orientacion_ppal)
 
 ## Número de viviendas --------
-BarrasPlot(df, df$num_viviendas_class)
-
+df$num_viviendas_class <- factor(df$num_viviendas_class, levels = c("Detached",
+                                                                    "From 2 to 4 dwellings",
+                                                                    "From 5 to 9 dwellings",
+                                                                    "From 10 to 19 dwellings",
+                                                                    "From 20 to 39 dwellings",
+                                                                    "More than 40 dwellings"))
+p4 <- BarrasPlot(df, df$num_viviendas_class)
+p4 + labs(title = "Number of Dwellings")
+ggsave("../images/viviendas.png")
 # Tabla resumen
 TablaResumen_Original(df$num_viviendas_class)
 
 ## Num. de plantas ------
-p <- BarrasPlot(df, as.factor(df$num_plantas)) 
-p + xlab("Floors") + ylab("Count")
+p5 <- BarrasPlot(df, as.factor(df$num_plantas))
+p5 + labs(title = "Number of floors")
+ggsave("../images/plantas.png")
 
 # Tabla resumen
 TablaResumen_Original(as.factor(df$num_plantas))
 
 ## Uso planta baja ---------
-BarrasPlot_Ordenado(df, df$uso_pb)
-
+p <- BarrasPlot_Ordenado(df, df$uso_pb)
+p + labs(title = "Use of the ground floor")
+ggsave("../images/pbaja.png")
 # Tabla resumen
 TablaResumen_Decreciente(df$uso_pb)
 
 ## Tipo de fachada --------
-BarrasPlot(df, df$tipo_fachada)
-
+p <- BarrasPlot(df, df$tipo_fachada)
+p + labs(title = "Type of façade")
+ggsave("../images/fachadas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_fachada)
 
