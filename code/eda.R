@@ -33,7 +33,7 @@ p <- ggplot(censo, aes(x = Decade, y = Registered)) +
 p <- p + theme (axis.text.x = element_text(angle = 45, vjust = 0.5),
            plot.title = element_text(hjust = 0.5))
 
-g <- grid.arrange(p + labs(caption="Reference: INE, 2019"))
+g <- grid.arrange(p + labs(caption="Source: INE, 2019"))
 
 ggsave("../images/census.png", g)
 
@@ -51,13 +51,14 @@ TablaResumen_Decreciente(df$barrio)
 ## Decada -----
 p2 <- BarrasPlot(df, df$decada)
 p2 + labs(title = "Decade in which the building was built")
+ggsave("../images/decada.png")
 
 # Tabla resumen
 TablaResumen_Original(df$decada)
 
 ## Orientacion -------
-BarrasPlot_Ordenado(df, df$orientacion_ppal)
-
+p3 <- BarrasPlot_Ordenado(df, df$orientacion_ppal)
+p3 + labs(title = "Main orientation of the building")
 # Tabla resumen
 TablaResumen_Decreciente(df$orientacion_ppal)
 
