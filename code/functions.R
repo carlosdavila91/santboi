@@ -77,14 +77,14 @@ BarrasPlot <- function(df, indexed_var){
 
 Histograma <- function(df, num_var){
         p <- ggplot(df, aes(x = num_var)) + 
-                geom_histogram(colour = "grey39") +
+                geom_histogram(colour = "grey39", fill = "#2644A1") +
                 theme(plot.title = element_text(hjust = 0.5))
         return(p)
 }
 
 Histograma_Log10 <- function(df, num_var){
         p <- ggplot(df, aes(x = log(num_var))) + 
-                geom_histogram(colour = "grey39") +
+                geom_histogram(colour = "grey39", fill = "#61C0C0") +
                 theme(plot.title = element_text(hjust = 0.5))
         return(p)
 }

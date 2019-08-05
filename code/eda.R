@@ -99,7 +99,7 @@ ggsave("../images/fachadas.png")
 TablaResumen_Original(df$tipo_fachada)
 
 ## Superficie de fachadas -------
-Histograma(df, df$sup_fachadas)
+Histograma(df, df$sup_fachadas) 
 Histograma_Log10(df, df$sup_fachadas)
 
 ## Tipo de cubierta ------
