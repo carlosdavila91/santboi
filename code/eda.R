@@ -115,9 +115,13 @@ ggsave("../images/cubiertas.png")
 TablaResumen_Original(df$tipo_cubierta)
 
 ## Superficie de cubierta -----
-Histograma(df, df$sup_cubierta)
+Histograma(df, df$sup_cubierta) +
+        labs(title = "")
+ggsave("../images/sup_cubierta.png")
 
-Histograma_Log10(df, df$sup_cubierta)
+Histograma_Log10(df, df$sup_cubierta) +
+        labs(title = "")
+ggsave("../images/supl10_cubiertas.png")
 
 ## Tipo de hueco -------
 BarrasPlot(df, df$tipo_hueco)

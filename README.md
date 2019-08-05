@@ -102,7 +102,8 @@ Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings|
  ---|---|---|---
 400 | 355| 41| 17
 
-### Type of façade
+### Facade
+#### Type of façade
 
 <p align="center">
   <img width="640" height="420" src="images/fachadas.png">
@@ -112,7 +113,7 @@ F1| F2|  F3
 ---|---|---
  468| 47| 299
 
-### Facade surface
+#### Facade surface
 
 <p align="center">
   <img width="640" height="420" src="images/sup_fachadas.png">
@@ -120,4 +121,25 @@ F1| F2|  F3
 
 <p align="center">
   <img width="640" height="420" src="images/supl10_fachadas.png">
+</p>
+
+### Roof
+#### Type of Roof
+
+<p align="center">
+  <img width="640" height="420" src="images/cubiertas.png">
+</p>
+
+C1|  C2|  C3|  C4|
+---| ---| ---| ---|
+161| 427| 141|  85|
+
+#### Roof surface
+
+<p align="center">
+  <img width="640" height="420" src="images/sup_cubierta.png">
+</p>
+
+<p align="center">
+  <img width="640" height="420" src="images/supl10_cubiertas.png">
 </p>
