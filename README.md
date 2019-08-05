@@ -119,10 +119,6 @@ F1| F2|  F3
   <img width="640" height="420" src="images/sup_fachadas.png">
 </p>
 
-<p align="center">
-  <img width="640" height="420" src="images/supl10_fachadas.png">
-</p>
-
 ### Roof
 #### Type of Roof
 
@@ -138,8 +134,4 @@ C1|  C2|  C3|  C4|
 
 <p align="center">
   <img width="640" height="420" src="images/sup_cubierta.png">
-</p>
-
-<p align="center">
-  <img width="640" height="420" src="images/supl10_cubiertas.png">
 </p>
