@@ -12,7 +12,7 @@ There are several moments of history in which an explosion of the construction s
 
 ### Final Energy Consumption by sector in Spain
 
-The following data has been taken from IDAE[\[1\]](http://guiaenergia.idae.es/el-consumo-energia-en-espana/)
+The following data has been taken from IDAE [\[1\]](http://guiaenergia.idae.es/el-consumo-energia-en-espana/)
 
 | Sector                                 | %             |
 | :------------------------------------- |--------------:|
@@ -24,7 +24,7 @@ The following data has been taken from IDAE[\[1\]](http://guiaenergia.idae.es/el
 
 As it can be seen above, households are directly responsible of an 18,5% of the final energy consumption. An if we take into account that Services includes commerce, hostelry, offices, health and education, we can come to realize how much energy the building sector consumes.
 
-The Standard requiring builders to use isolation on the walls of buildings came into force in the year 1980[\[2\]](https://www.boe.es/buscar/doc.php?id=BOE-A-1979-24866). Until then, thermal isolation on the facade wasn't common.
+The Standard requiring builders to use isolation on the walls of buildings came into force in the year 1980 [\[2\]](https://www.boe.es/buscar/doc.php?id=BOE-A-1979-24866). Until then, thermal isolation on the facade wasn't common.
 
 This milestone represents a great opportunity today to address one of the main sectors when it comes to Carbon Dioxide emissions.
 
