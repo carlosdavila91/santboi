@@ -40,7 +40,7 @@ Data were collected from more than 800 buildings. An exploratory analysis of the
 
 ### District
 
-The study is oriented to the districts of Marianao and Vinyets, according to the conditions established by the municipality
+The study is oriented to the districts of Marianao and Vinyets, according to the conditions established by the municipality.
 
 <p align="center">
   <img width="640" height="420" src="images/barrio.png">
@@ -49,3 +49,15 @@ The study is oriented to the districts of Marianao and Vinyets, according to the
 MARIANAO| VINYETS
 ---- | ----
 499 | 315
+
+### Decade
+
+The period of construction of buildings are
+
+<p align="center">
+  <img width="640" height="420" src="images/decada.png">
+</p>
+
+Before 1899| From 1900 to 1940| From 1941 to 1960| From 1961 to 1970| From 1971 to 1980
+---|---|---|---|---
+19| 132| 90| 312 | 261
