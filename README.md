@@ -65,7 +65,7 @@ It seems that this city suffered a vast growth during periods of strong internal
 ### Orientation of Buildings
 
 <p align="center">
-  <img width="640" height="420" src="images/decada.png">
+  <img width="640" height="420" src="images/orientacion.png">
 </p>
 
 N| S|   E|   O| SE |NE| NO| SO
