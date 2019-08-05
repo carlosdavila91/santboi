@@ -1,8 +1,8 @@
-## Sant Boi
+# Sant Boi
 
-### Case of Study
+## Case of Study
 
-#### A little bit of Spanish Construction Sector History
+### A little bit of Spanish Construction Sector History
 
 There are several moments of history in which an explosion of the construction sector occurs. Those are mainly between the beginning of 60's, with a massive migration from the countryside to the city; and at the beginning of the 90's until the year 2008, when the big financial crisis begun.
 
@@ -10,7 +10,7 @@ There are several moments of history in which an explosion of the construction s
   <img width="640" height="420" src="images/census.png">
 </p>
 
-##### Final Energy Consumption by sector in Spain
+### Final Energy Consumption by sector in Spain
 
 The following data has been taken from [IDAE](http://guiaenergia.idae.es/el-consumo-energia-en-espana/)
 
@@ -28,10 +28,10 @@ The Standard requiring builders to use isolation on the walls of buildings came 
 
 This milestone represents a great opportunity today to address one of the main sectors when it comes to Carbon Dioxide emissions.
 
-##### Sant Boi de Llobregat
+### Sant Boi de Llobregat
 
 The City Hall of Sant Boi de Llobregat (Catalonia) asked to the Universitat Politècnica de Catalunya for a study on the Energy Efficiency of buildings in certain districts of the town.
 
 An exploratory analysis of data collected on buildings is presented here.
 
-# Exploratory Data Analysis
+## Exploratory Data Analysis
