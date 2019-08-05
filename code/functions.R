@@ -104,7 +104,7 @@ Histograma <- function(df, num_var){
         
         # Stutges rule for the number of bins
         M = nrow(df) 
-        k = round(1 + log2(M))
+        k = round(1 + log2(M)) + 1
         
         p <- ggplot(df, aes(x = num_var)) + 
                 geom_histogram(colour = "grey39", fill = "#2644A1", bins = k) +
@@ -117,7 +117,7 @@ Histograma_Log10 <- function(df, num_var){
         
         # Stutges rule for the number of bins
         M = nrow(df) 
-        k = round(1 + log2(M))
+        k = round(1 + log2(M)) + 1
         
         p <- ggplot(df, aes(x = num_var)) + 
                 geom_histogram(colour = "grey39", fill = "#61C0C0", bins = k) +

@@ -103,9 +103,9 @@ Histograma(df, df$sup_fachadas) +
         labs(title = "Histogram of facades surface")
 ggsave("../images/sup_fachadas.png")
 
-Histograma_Log10(df, df$sup_fachadas) +
-        labs(title = "Histogram in log10 base of facades surface")
-ggsave("../images/supl10_fachadas.png")
+# Histograma_Log10(df, df$sup_fachadas) +
+#         labs(title = "Histogram in log10 base of facades surface")
+# ggsave("../images/supl10_fachadas.png")
 
 ## Tipo de cubierta ------
 BarrasPlot(df, df$tipo_cubierta) + 
@@ -116,12 +116,12 @@ TablaResumen_Original(df$tipo_cubierta)
 
 ## Superficie de cubierta -----
 Histograma(df, df$sup_cubierta) +
-        labs(title = "")
+        labs(title = "Histogram of Roof Surfaces")
 ggsave("../images/sup_cubierta.png")
 
-Histograma_Log10(df, df$sup_cubierta) +
-        labs(title = "")
-ggsave("../images/supl10_cubiertas.png")
+# Histograma_Log10(df, df$sup_cubierta) +
+#         labs(title = "Histogram in log10 base of Roof Surfaces")
+# ggsave("../images/supl10_cubiertas.png")
 
 ## Tipo de hueco -------
 BarrasPlot(df, df$tipo_hueco)
@@ -130,7 +130,7 @@ TablaResumen_Original(df$tipo_hueco)
 
 ## Sup huecos -------
 Histograma(df, df$sup_huecos)
-Histograma_Log10(df, df$sup_huecos)
+# Histograma_Log10(df, df$sup_huecos)
 
 ## Tipo med exp -------
 BarrasPlot(df, df$tipo_med_exp)
