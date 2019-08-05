@@ -41,3 +41,13 @@ Buildings taken into account for the study are those which were built before 198
 Data were collected from more than 800 buildings. An exploratory analysis of the variables collected on the buildings is presented here.
 
 ## Exploratory Data Analysis
+
+### District
+
+<p align="center">
+  <img width="640" height="420" src="images/barrio.png">
+</p>
+
+MARIANAO| VINYETS
+---- | ----
+499 | 315 
