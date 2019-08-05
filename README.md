@@ -124,7 +124,7 @@ F1| F2|  F3
 </p>
 
 ### Roof
-#### Type of Roof
+#### Type of Roof
 
 <p align="center">
   <img width="640" height="420" src="images/cubiertas.png">
