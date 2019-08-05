@@ -102,7 +102,7 @@ Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings|
  ---|---|---|---
 400 | 355| 41| 17
 
-### Facade
+### Facade
 #### Type of façade
 
 <p align="center">
