@@ -111,3 +111,13 @@ Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings|
 F1| F2|  F3
 ---|---|---
  468| 47| 299
+
+### Facade surface
+
+<p align="center">
+  <img width="640" height="420" src="images/sup_fachadas.png">
+</p>
+
+<p align="center">
+  <img width="640" height="420" src="images/supl10_fachadas.png">
+</p>

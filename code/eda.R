@@ -93,14 +93,19 @@ TablaResumen_Decreciente(df$uso_pb)
 
 ## Tipo de fachada --------
 p <- BarrasPlot(df, df$tipo_fachada)
-p + labs(title = "Type of façade")
+p + labs(title = "Type of facade")
 ggsave("../images/fachadas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_fachada)
 
 ## Superficie de fachadas -------
-Histograma(df, df$sup_fachadas) 
-Histograma_Log10(df, df$sup_fachadas)
+Histograma(df, df$sup_fachadas) +
+        labs(title = "Histogram of facades surface")
+ggsave("../images/sup_fachadas.png")
+
+Histograma_Log10(df, df$sup_fachadas) +
+        labs(title = "Histogram in log10 base of facades surface")
+ggsave("../images/supl10_fachadas.png")
 
 ## Tipo de cubierta ------
 BarrasPlot(df, df$tipo_cubierta)
