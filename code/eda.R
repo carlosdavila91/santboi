@@ -10,7 +10,7 @@ library(reshape2)
 
 source("../code/functions.R")
 
-# Set the default theme for the sesion
+# Set the default theme for the sesion ------
 theme_set(theme_light())
 ## Censo de viviendas en españa --------------------------------------------------
 censo <- read.csv("../data/clean_censo_2011.csv")

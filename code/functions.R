@@ -1,6 +1,7 @@
 ## Functions
 
 ## Funciones ----------
+## Tablas resumen ------
 TablaResumen_Decreciente <- function(cat_var){
         tabla <- data.frame(table(cat_var))
         tabla <- tabla[order(tabla$Freq, decreasing = T),]
@@ -20,6 +21,7 @@ TablaResumen_Original <- function(cat_var){
         tabla
 }
 
+## Barplots -----
 BarrasPlot_Ordenado <- function(df, indexed_var){
         library(ggplot2)
         if(any(any(nchar(levels(indexed_var))>= 10))==TRUE){
@@ -75,22 +77,39 @@ BarrasPlot <- function(df, indexed_var){
         return(p)
 }
 
+## Histogramas -----
 Histograma <- function(df, num_var){
+        
+        # Stutges rule for the number of bins
+        M = nrow(df) 
+        k = round(1 + log2(M))
+        
         p <- ggplot(df, aes(x = num_var)) + 
-                geom_histogram(colour = "grey39", fill = "#2644A1") +
+                geom_histogram(colour = "grey39", fill = "#2644A1", bins = k) +
                 labs(x = NULL, y = NULL) +
                 theme(plot.title = element_text(hjust = 0.5))
         return(p)
 }
 
 Histograma_Log10 <- function(df, num_var){
-        p <- ggplot(df, aes(x = log(num_var))) + 
-                geom_histogram(colour = "grey39", fill = "#61C0C0") +
+        
+        # Stutges rule for the number of bins
+        M = nrow(df) 
+        k = round(1 + log2(M))
+        
+        p <- ggplot(df, aes(x = num_var)) + 
+                geom_histogram(colour = "grey39", fill = "#61C0C0", bins = k) +
                 labs(x = NULL, y = NULL) +
-                theme(plot.title = element_text(hjust = 0.5))
+                scale_x_log10(breaks = pretty_breaks(n = 8)) +
+                # scale_x_log10(breaks = seq(from = 10,
+                #                            to = round(max(num_var)),
+                #                            length.out = 5)) +
+                theme(plot.title = element_text(hjust = 0.5),
+                      axis.text.x = element_text(angle = 45, hjust = 1))
         return(p)
 }
 
+## Notation -------
 fancy_scientific <- function(l) {
         # turn in to character string in scientific notation
         l <- format(l, scientific = TRUE)
