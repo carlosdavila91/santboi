@@ -4,7 +4,7 @@
 
 ### A little bit of Spanish Construction Sector History
 
-There are several moments of history in which an explosion of the construction sector occurs. Those are mainly between the beginning of 60's, with a massive migration from the countryside to the city; and at the beginning of the 90's until the year 2008, when the big financial crisis begun.
+There are several moments of history in which an explosion of the construction sector occurs. Those are mainly between the beginning of 60's, with a massive migration from the countryside to the city; and at the beginning of the 90's until the year 2008, when the big international financial crisis begun.
 
 <p align="center">
   <img width="640" height="420" src="images/census.png">
@@ -43,7 +43,7 @@ Data were collected from more than 800 buildings. An exploratory analysis of the
 The study is oriented to the districts of Marianao and Vinyets, according to the conditions established by the municipality
 
 <p align="center">
-  <img width="460" height="300" src="images/barrio.png">
+  <img width="640" height="420" src="images/barrio.png">
 </p>
 
 MARIANAO| VINYETS
