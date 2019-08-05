@@ -14,6 +14,8 @@ There are several moments of history in which an explosion of the construction s
 
 The following data has been taken from [IDAE](http://guiaenergia.idae.es/el-consumo-energia-en-espana/)
 
+<center>
+
 | Sector                                 | %             |
 | -------------------------------------- |--------------:|
 | Transportation                         | 41,7          |
@@ -21,6 +23,8 @@ The following data has been taken from [IDAE](http://guiaenergia.idae.es/el-cons
 | Households                             | 18,5          |
 | Services                               | 12,5          |
 | Agriculture, phishing and others       | 3,8           |
+
+</center>
 
 As it can be seen above, households are directly responsible of an 18,5% of the final energy consumption. An if we take into account that Services includes commerce, hostelry, offices, health and education, we can come to realize how much energy the building sector consumes.
 
@@ -32,6 +36,8 @@ This milestone represents a great opportunity today to address one of the main s
 
 The City Hall of Sant Boi de Llobregat (Catalonia) asked to the Universitat Politècnica de Catalunya for a study on the Energy Efficiency of buildings in certain districts of the town.
 
-An exploratory analysis of data collected on buildings is presented here.
+Buildings taken into account for the study are those which were built before 1980, according to the reasons given in the previous introduction.
+
+Data were collected from more than 800 buildings. An exploratory analysis of the variables collected on the buildings is presented here.
 
 ## Exploratory Data Analysis
