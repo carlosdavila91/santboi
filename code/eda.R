@@ -8,7 +8,7 @@ library(gridExtra)
 library(grid)
 library(reshape2)
 
-source("functions.R")
+source("../code/functions.R")
 
 # Set the default theme for the sesion
 theme_set(theme_light())
@@ -21,26 +21,36 @@ censo$Decade <- factor(censo$Decade, levels = c("Before 1900", "1900-1920","1921
                                             "1971-1980", "1981-1990", "1991-2001",
                                             "2002-2011"))
 
-p <- ggplot(censo, aes(x = Decade, y = Registered, fill = Decade)) + 
+colourCount = length(unique(censo$Decade))
+getPalette = colorRampPalette(RColorBrewer::brewer.pal(9, "YlGnBu"))
+
+p <- ggplot(censo, aes(x = Decade, y = Registered)) + 
+        geom_col(colour = "grey39", fill = getPalette(colourCount)) +
         labs(title = "Spanish Housing Census grouped by decade") +
         guides(fill = FALSE) +
-        geom_col(colour = "grey39") +
-        scale_y_continuous(labels = fancy_scientific) +
-        scale_fill_brewer(palette = "Spectral")
+        scale_y_continuous(labels = fancy_scientific)
 
-p + theme (axis.text.x = element_text(angle = 45, vjust = 0.5))
+p <- p + theme (axis.text.x = element_text(angle = 45, vjust = 0.5),
+           plot.title = element_text(hjust = 0.5))
+
+g <- grid.arrange(p + labs(caption="Reference: INE, 2019"))
+
+ggsave("../images/census.png", g)
 
 ## Sant Boi ----------------------------------------------------------------------
 df <- read.csv("../data/1906SB_collection_clean.csv", fileEncoding = "latin1")
 
 ## Barrio -----
-BarrasPlot(df, df$barrio)
+p1 <- BarrasPlot_Ordenado(df, df$barrio)
+p1 + labs(title = "Buildings by district", x = NULL, y = NULL) 
+ggsave("../images/barrio.png")
 
 # Tabla resumen
 TablaResumen_Decreciente(df$barrio)
 
 ## Decada -----
-BarrasPlot(df, df$decada)
+p2 <- BarrasPlot(df, df$decada)
+p2 + labs(title = "Decade in which the building was built")
 
 # Tabla resumen
 TablaResumen_Original(df$decada)
