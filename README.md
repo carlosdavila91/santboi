@@ -60,4 +60,4 @@ Before 1899| From 1900 to 1940| From 1941 to 1960| From 1961 to 1970| From 1971 
 ---|---|---|---|---
 19| 132| 90| 312 | 261
 
-It seems that this city grew during periods of strong internal migration in the interior of the country.
+It seems that this city suffered a vast growth during periods of strong internal migration in the interior of the country. Notice that in the second bar in the chart there are four decades aggregated.
