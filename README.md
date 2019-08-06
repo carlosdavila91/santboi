@@ -43,7 +43,7 @@ Data were collected from more than 800 buildings. An exploratory analysis of the
 The study is oriented to the districts of Marianao and Vinyets, according to the conditions established by the municipality.
 
 <p align="center">
-  <img width="640" height="420" src="images/barrio.png">
+  <img width="70%" height="60%" src="images/barrio.png">
 </p>
 
 MARIANAO| VINYETS
@@ -72,7 +72,7 @@ N| S|   E|   W| SE |NE| NW| SW
 ---|---|---|---|---|---|---|---
 134| 131| 109| 106| 98| 86| 79| 71
 
-The most frequent orientations are the four main cardinal points. In terms of Bioclimatic Architectonic criteria, the best ones in this case are SE, SW and S
+The most frequent orientations are the four main cardinal points. In terms of Bioclimatic Architectonic criteria, the best ones in this case are SE, SW and S.
 
 ### Number of dwellings
 
