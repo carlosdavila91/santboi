@@ -30,25 +30,38 @@ This milestone represents a great opportunity today to address one of the main s
 
 ### Sant Boi de Llobregat
 
-The City Hall of Sant Boi de Llobregat (Catalonia) asked to the Universitat Politècnica de Catalunya for a study on the Energy Efficiency of buildings in certain districts of the town.
+The City Council of Sant Boi de Llobregat (Catalonia) asked to the Universitat Politècnica de Catalunya for a study on the Energy Efficiency of buildings in certain districts of this town.
 
 Buildings taken into account for the study are those which were built before 1980, according to the reasons given in the previous introduction.
 
 Data were collected from more than 800 buildings. An exploratory analysis of the variables collected on the buildings is presented here.
 
-## Exploratory Data Analysis - Univariate Analysis
+### Overall aim of the Study
+
+This study have been conducted in order to establish a strategy to intervene in buildings from an energy point of view.
+
+The two possible ways to address this problem are the following:
+
+* Intervene those buildings which may lead to a greater amount of energy savings.
+* Intervene buildings in order to reduce the chances of inhabitants to fall into energy poverty
+
+These are items to be taken into account to make a good EDA.
+
+## Exploratory Data Analysis (EDA) - Univariate Analysis
 
 ### District
 
 The study is oriented to the districts of Marianao and Vinyets, according to the conditions established by the municipality.
 
 <p align="center">
-  <img width="70%" height="60%" src="images/barrio.png">
+  <img width="640" height="420" src="images/barrio.png">
 </p>
 
 MARIANAO| VINYETS
 ---- | ----
 499 | 315
+
+After a quick look to the map, we can see that
 
 ### Decade
 
@@ -64,6 +77,8 @@ It seems that this city suffered a vast growth during periods of strong internal
 
 ### Orientation of Buildings
 
+Orientation is one of the most important factors when it comes to energy efficiency of households.
+
 <p align="center">
   <img width="640" height="420" src="images/orientacion.png">
 </p>
@@ -72,7 +87,7 @@ N| S|   E|   W| SE |NE| NW| SW
 ---|---|---|---|---|---|---|---
 134| 131| 109| 106| 98| 86| 79| 71
 
-The most frequent orientations are the four main cardinal points. In terms of Bioclimatic Architectonic criteria, the best ones in this case are SE, SW and S.
+The most frequent orientations are the four main cardinal points. In terms of Bioclimatic Architectonic criteria, the best ones in this case are SE, SW and S. They can help us use less heating in winter by taking advantage of the sun projecting on the facades of these orientations.
 
 ### Number of dwellings
 
@@ -211,3 +226,7 @@ Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
 Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
   ---|     ---|    ---|  ---|     ---|  ---|
 0|       0|     65|  208|     269| 2985|
+
+## Heat Demand Model
+
+With regard to the aim of the study in charge of the university, a physical model was applied to buildings gathered for the investigation.
