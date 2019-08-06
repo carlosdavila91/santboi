@@ -140,7 +140,10 @@ TablaResumen_Original(df$tipo_hueco)
 Histograma(df, df$sup_huecos) +
         labs(title = "Histogram of Facade Openings surface")
 ggsave("images/sup_huecos.png")
+
 # Histograma_Log10(df, df$sup_huecos)
+
+Resumen_Estadistico(df$sup_huecos)
 
 ## Tipo med exp -------
 BarrasPlot(df, df$tipo_med_exp) +
@@ -153,6 +156,8 @@ TablaResumen_Original(df$tipo_med_exp)
 Histograma(df, df$sup_median_exp) + 
         labs(title = "Histogram of party walls surface")
 ggsave("images/sup_medianeras.png")
+
+Resumen_Estadistico(df$sup_median_exp)
 
 ## Sup med no calefactado -------
 # Todos los datos
@@ -168,11 +173,17 @@ ggsave("images/sup_medianeras.png")
 Histograma(df, df$sup_contacto_terreno) +
         labs(title = "Histogram of surface in contact with the ground")
 ggsave("images/sup_terreno.png")
+
+Resumen_Estadistico(df$sup_contacto_terreno)
+
 # Histograma_Log10( df, df$sup_contacto_terreno )
 ## Superficie de patio -------
 Histograma(df, df$sup_patio) +
         labs(title = "Histogram of surface of courtyard")
 ggsave("images/sup_patios.png")
+
+Resumen_Estadistico(df$sup_patio)
+
 # Histograma_Log10(df, df$sup_patio)
 ## Superficie envolvente ------
 # En duda, al ser una variable obtenida a partir de las anteriores

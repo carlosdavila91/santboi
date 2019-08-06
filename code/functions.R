@@ -141,9 +141,22 @@ Histograma <- function(df, num_var){
         k = round(1 + log2(M)) + 1
         
         p <- ggplot(df, aes(x = num_var)) + 
-                geom_histogram(colour = "grey39", fill = "#2644A1", bins = k) +
+                geom_histogram(colour = "grey39", fill = "#99D5B8", bins = k) +
+                # geom_density() +
+                geom_vline(aes(xintercept = mean(num_var), color = "Mean"),
+                           # col="#0A1F57", 
+                           size = 1,
+                           linetype = "dashed") +
+                geom_vline(aes(xintercept = median(num_var), color = "Median"),
+                           # col="#2681B6", 
+                           size = 1,
+                           linetype = "dashed") +
                 labs(x = NULL, y = NULL) +
-                theme(plot.title = element_text(hjust = 0.5))
+                scale_color_manual(name = "Statistics", 
+                                   values = c(Median = "#2681B6", Mean = "#0A1F57")) +
+                theme(plot.title = element_text(hjust = 0.5),
+                      legend.position = c(1,1), 
+                      legend.justification = c(1.5,1.5))
         return(p)
 }
 
