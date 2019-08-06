@@ -1,4 +1,4 @@
-# Sant Boi
+# Exploratory Data Analysis
 
 ## Table of Contents
 
