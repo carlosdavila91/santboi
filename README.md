@@ -262,3 +262,5 @@ Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
 ## Heat Demand Model
 
 With regard to the aim of the study in charge of the university, a physical model was applied to buildings gathered for the investigation.
+
+_Note for my future self: explore heat demand statistical and machine learning models when data is available_ 
