@@ -36,7 +36,7 @@ Buildings taken into account for the study are those which were built before 198
 
 Data were collected from more than 800 buildings. An exploratory analysis of the variables collected on the buildings is presented here.
 
-## Exploratory Data Analysis
+## Exploratory Data Analysis - Univariate Analysis
 
 ### District
 
@@ -94,6 +94,10 @@ Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings|
 ---|---|---|---|---|---|---|---
  67| 204| 107| 84| 207| 84| 50| 11
 
+ Min.| 1st Qu.| Median|   Mean| 3rd Qu.| Max.|
+   ---|     ---|    ---|    ---|     ---|  ---|
+     1|       2|      4|   3.82|       5|    8|
+
 ### Use of the ground floor
 
 <p align="center">
@@ -121,6 +125,10 @@ F1| F2|  F3
   <img width="640" height="420" src="images/sup_fachadas.png">
 </p>
 
+Min.| 1st Qu.| Median|  Mean| 3rd Qu.|    Max.|
+---|  ---| ---| ---|  ---|  ---|
+ 14|   77| 158| 283|  344| 2766|
+
 ### Roof
 #### Types of Roofs
 
@@ -137,6 +145,10 @@ C1|  C2|  C3|  C4|
 <p align="center">
   <img width="640" height="420" src="images/sup_cubierta.png">
 </p>
+
+Min.| 1st Qu.| Median|   Mean| 3rd Qu.| Max.|
+---|  ---| ---| ---|  ---|  ---|
+ 30|   91| 130| 188|  225| 1367|
 
 ### Facade openings
 #### Types of facade openings
@@ -155,6 +167,10 @@ H1|  H2|  H3|  H4|  H5|
   <img width="640" height="420" src="images/sup_huecos.png">
 </p>
 
+Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
+  ---|     ---|    ---|  ---|     ---|  ---|
+    3|      19|     40|   92|      94| 1795|
+
 ### Party walls
 #### Types of party walls
 
@@ -172,14 +188,26 @@ H1|  H2|  H3|  H4|  H5|
   <img width="640" height="420" src="images/sup_medianeras.png">
 </p>
 
+Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
+  ---|     ---|    ---|  ---|     ---|  ---|
+    0|       0|     34|   89|     118| 1287|
+
 ### Surface in contact with the ground
 
 <p align="center">
   <img width="640" height="420" src="images/sup_terreno.png">
 </p>
 
+Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
+  ---|     ---|    ---|  ---|     ---|  ---|
+   39|      94|    132|  191|     226| 1405|
+
 ### Surface of courtyard
 
 <p align="center">
   <img width="640" height="420" src="images/sup_patios.png">
 </p>
+
+Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
+  ---|     ---|    ---|  ---|     ---|  ---|
+    0|       0|     65|  208|     269| 2985|

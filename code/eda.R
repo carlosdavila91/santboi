@@ -13,7 +13,7 @@ source("code/functions.R")
 # Set the default theme for the sesion ------
 theme_set(theme_light())
 ## Censo de viviendas en españa --------------------------------------------------
-censo <- read.csv("../data/clean_censo_2011.csv")
+censo <- read.csv("data/clean_censo_2011.csv")
 colnames(censo) <- gsub("\\.", "\\ ", colnames(censo))
 
 censo$Decade <- factor(censo$Decade, levels = c("Before 1900", "1900-1920","1921-1940",
@@ -35,15 +35,15 @@ p <- p + theme (axis.text.x = element_text(angle = 45, vjust = 0.5),
 
 g <- grid.arrange(p + labs(caption="Source: INE, 2019"))
 
-ggsave("../images/census.png", g)
+ggsave("images/census.png", g)
 
 ## Sant Boi ----------------------------------------------------------------------
 df <- read.csv("data/1906SB_collection_clean.csv", fileEncoding = "latin1")
 
 ## Barrio -----
-p1 <- BarrasPlot_Ordenado(df, df$barrio)
-p1 + labs(title = "Buildings by district", x = NULL, y = NULL) 
-ggsave("../images/barrio.png")
+BarrasPlot_Ordenado(df, df$barrio) +
+        labs(title = "Buildings by district", x = NULL, y = NULL) 
+ggsave("images/barrio.png")
 
 # Tabla resumen
 TablaResumen_Decreciente(df$barrio)
@@ -51,7 +51,7 @@ TablaResumen_Decreciente(df$barrio)
 ## Decada -----
 p2 <- BarrasPlot(df, df$decada)
 p2 + labs(title = "Decade in which the building was built")
-ggsave("../images/decada.png")
+ggsave("images/decada.png")
 
 # Tabla resumen
 TablaResumen_Original(df$decada)
@@ -59,7 +59,7 @@ TablaResumen_Original(df$decada)
 ## Orientacion -------
 BarrasPlot_Ordenado(df, df$orientacion_ppal) +
         labs(title = "Main orientation of the building")
-ggsave("../images/orientacion.png")
+ggsave("images/orientacion.png")
 # Tabla resumen
 TablaResumen_Decreciente(df$orientacion_ppal)
 
@@ -70,42 +70,46 @@ df$num_viviendas_class <- factor(df$num_viviendas_class, levels = c("Detached",
                                                                     "From 10 to 19 dwellings",
                                                                     "From 20 to 39 dwellings",
                                                                     "More than 40 dwellings"))
-p4 <- BarrasPlot(df, df$num_viviendas_class)
-p4 + labs(title = "Number of Dwellings")
-ggsave("../images/viviendas.png")
+BarrasPlot(df, df$num_viviendas_class) +
+        labs(title = "Number of Dwellings")
+ggsave("images/viviendas.png")
 # Tabla resumen
 TablaResumen_Original(df$num_viviendas_class)
 
 ## Num. de plantas ------
-p5 <- BarrasPlot(df, as.factor(df$num_plantas))
-p5 + labs(title = "Number of floors")
-ggsave("../images/plantas.png")
+BarrasPlot(df, as.factor(df$num_plantas)) +
+        labs(title = "Number of floors")
+ggsave("images/plantas.png")
 
 # Tabla resumen
 TablaResumen_Original(as.factor(df$num_plantas))
 
+Resumen_Estadistico(df$num_plantas)
+
 ## Uso planta baja ---------
 p <- BarrasPlot_Ordenado(df, df$uso_pb)
 p + labs(title = "Use of the ground floor")
-ggsave("../images/pbaja.png")
+ggsave("images/pbaja.png")
 # Tabla resumen
 TablaResumen_Decreciente(df$uso_pb)
 
 ## Tipo de fachada --------
 p <- BarrasPlot(df, df$tipo_fachada)
 p + labs(title = "Type of facade")
-ggsave("../images/fachadas.png")
+ggsave("images/fachadas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_fachada)
 
 ## Superficie de fachadas -------
 Histograma(df, df$sup_fachadas) +
         labs(title = "Histogram of facades surface")
-ggsave("../images/sup_fachadas.png")
+ggsave("images/sup_fachadas.png")
+
+Resumen_Estadistico(df$sup_fachadas)
 
 # Histograma_Log10(df, df$sup_fachadas) +
 #         labs(title = "Histogram in log10 base of facades surface")
-# ggsave("../images/supl10_fachadas.png")
+# ggsave("images/supl10_fachadas.png")
 
 ## Tipo de cubierta ------
 BarrasPlot(df, df$tipo_cubierta) + 
@@ -117,11 +121,13 @@ TablaResumen_Original(df$tipo_cubierta)
 ## Superficie de cubierta -----
 Histograma(df, df$sup_cubierta) +
         labs(title = "Histogram of Roof Surfaces")
-ggsave("../images/sup_cubierta.png")
+ggsave("images/sup_cubierta.png")
+
+Resumen_Estadistico(df$sup_cubierta)
 
 # Histograma_Log10(df, df$sup_cubierta) +
 #         labs(title = "Histogram in log10 base of Roof Surfaces")
-# ggsave("../images/supl10_cubiertas.png")
+# ggsave("images/supl10_cubiertas.png")
 
 ## Tipo de hueco -------
 BarrasPlot(df, df$tipo_hueco) + 

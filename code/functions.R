@@ -2,6 +2,40 @@
 
 ## Funciones ----------
 ## Tablas resumen ------
+Resumen_Estadistico <- function(indexed_numeric_var){
+        if(max(indexed_numeric_var) < 100){
+                tabla <- as.data.frame(as.array(summary(indexed_numeric_var)))
+                tabla$Freq <- round(tabla$Freq, digits = 2)
+                n <- as.character(tabla$Var1)
+                n <- paste(n,"|",sep = "")
+                tabla <- data.frame(t(tabla[,-1]))
+                colnames(tabla) <- n
+                
+                tabla[2,] <- tabla[1,]
+                tabla[2,] <- paste(tabla[2,],"|", sep = "")
+                tabla[1,] <- rep("---|", length(colnames(tabla)))
+                
+                rownames(tabla) <- NULL
+                
+                print(tabla, row.names = FALSE)
+        }else{
+                tabla <- as.data.frame(as.array(summary(indexed_numeric_var)))
+                tabla$Freq <- round(tabla$Freq)
+                n <- as.character(tabla$Var1)
+                n <- paste(n,"|",sep = "")
+                tabla <- data.frame(t(tabla[,-1]))
+                colnames(tabla) <- n
+                
+                tabla[2,] <- tabla[1,]
+                tabla[2,] <- paste(tabla[2,],"|", sep = "")
+                tabla[1,] <- rep("---|", length(colnames(tabla)))
+                
+                rownames(tabla) <- NULL
+                
+                print(tabla, row.names = FALSE)  
+        }
+}
+
 TablaResumen_Decreciente <- function(cat_var){
         
         tabla <- data.frame(table(cat_var))
@@ -20,7 +54,7 @@ TablaResumen_Decreciente <- function(cat_var){
         
         rownames(tabla) <- NULL
         
-        tabla
+        print(tabla, row.names = FALSE)
 }
 
 TablaResumen_Original <- function(cat_var){
@@ -40,7 +74,7 @@ TablaResumen_Original <- function(cat_var){
         
         rownames(tabla) <- NULL
         
-        tabla
+        print(tabla, row.names = FALSE)
 }
 
 ## Barplots -----
