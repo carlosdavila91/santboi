@@ -4,8 +4,10 @@
 .RData
 .Rhistory
 .Rproj.user
+.Rproj
 
 data
 R
 finals
 notebook
+preprocessing
