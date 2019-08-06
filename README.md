@@ -153,7 +153,7 @@ H1|  H2|  H3|  H4|  H5|
   <img width="640" height="420" src="images/sup_huecos.png">
 </p>
 
-### Party walls
+### Party walls
 #### Types of party walls
 
 <p align="center">
@@ -161,8 +161,8 @@ H1|  H2|  H3|  H4|  H5|
 </p>
 
 0|  M1|  M2|  M3|
-1 ---| ---| ---| ---|
-2 308| 255| 243|   8|
+---| ---| ---| ---|
+308| 255| 243|   8|
 
 #### Party walls surface
 
