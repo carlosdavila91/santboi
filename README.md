@@ -81,7 +81,7 @@ These are items to be taken into account to make a good EDA.
 
 ### District
 
-The study is oriented to the districts of [Marianao](https://www.google.es/maps/place/Marianao/@41.3479877,2.0263476,1045m/data=!3m1!1e3!4m5!3m4!1s0x12a49b822306e79d:0x3297c05bdd8c8ad1!8m2!3d41.3487888!4d2.0287207) and [Vinyets](https://www.google.es/maps/@41.3374306,2.0438772,919m/data=!3m1!1e3), according to the conditions established by the municipality.
+The study is oriented to the districts of <a href="https://www.google.es/maps/place/Marianao/@41.3479877,2.0263476,1045m/data=!3m1!1e3!4m5!3m4!1s0x12a49b822306e79d:0x3297c05bdd8c8ad1!8m2!3d41.3487888!4d2.0287207" target="_blank">Marianao</a> and <a href="https://www.google.es/maps/@41.3374306,2.0438772,919m/data=!3m1!1e3" target="_blank">Vinyets</a>, according to the conditions established by the municipality.
 
 <p align="center">
   <img width="640" height="420" src="images/barrio.png">
