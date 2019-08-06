@@ -1,7 +1,6 @@
 # Sant Boi
 
-Table of Contents
-=================
+## Table of Contents
 
    * [Sant Boi](#sant-boi)
       * [Case of Study](#case-of-study)
@@ -31,7 +30,7 @@ Table of Contents
          * [Surface in contact with the ground](#surface-in-contact-with-the-ground)
          * [Surface of courtyard](#surface-of-courtyard)
       * [Heat Demand Model](#heat-demand-model)
-      
+
 ## Case of Study
 
 ### A little bit of Spanish Construction Sector History
