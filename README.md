@@ -68,9 +68,11 @@ It seems that this city suffered a vast growth during periods of strong internal
   <img width="640" height="420" src="images/orientacion.png">
 </p>
 
-N| S|   E|   O| SE |NE| NO| SO
+N| S|   E|   W| SE |NE| NW| SW
 ---|---|---|---|---|---|---|---
 134| 131| 109| 106| 98| 86| 79| 71
+
+The most frequent orientations are the four main cardinal points. In terms of Bioclimatic Architectonic criteria, the best ones in this case are SE, SW and S
 
 ### Number of dwellings
 
@@ -80,7 +82,7 @@ N| S|   E|   O| SE |NE| NO| SO
 
 Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings| From 20 to 39 dwellings| More than 40 dwellings
 ---|---|---|---|---|---
-261|                   182|                   111|                     155|   82|                     22
+261|182| 111|155|82|22
 
 ### Number of floors
 
