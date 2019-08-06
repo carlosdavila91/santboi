@@ -120,7 +120,7 @@ F1| F2|  F3
 </p>
 
 ### Roof
-#### Type of Roof
+#### Types of Roofs
 
 <p align="center">
   <img width="640" height="420" src="images/cubiertas.png">
@@ -130,8 +130,54 @@ C1|  C2|  C3|  C4|
 ---| ---| ---| ---|
 161| 427| 141|  85|
 
-#### Roof surface
+#### Roofs surface
 
 <p align="center">
   <img width="640" height="420" src="images/sup_cubierta.png">
+</p>
+
+### Facade openings
+#### Types of facade openings
+
+<p align="center">
+  <img width="640" height="420" src="images/huecos.png">
+</p>
+
+H1|  H2|  H3|  H4|  H5|
+---| ---| ---| ---| ---|
+ 26|  28| 471| 284|   5|
+
+#### Openings surface
+
+<p align="center">
+  <img width="640" height="420" src="images/sup_huecos.png">
+</p>
+
+### Party walls
+#### Types of party walls
+
+<p align="center">
+  <img width="640" height="420" src="images/medianeras.png">
+</p>
+
+0|  M1|  M2|  M3|
+1 ---| ---| ---| ---|
+2 308| 255| 243|   8|
+
+#### Party walls surface
+
+<p align="center">
+  <img width="640" height="420" src="images/sup_medianeras.png">
+</p>
+
+### Surface in contact with the ground
+
+<p align="center">
+  <img width="640" height="420" src="images/sup_terreno.png">
+</p>
+
+### Surface of courtyard
+
+<p align="center">
+  <img width="640" height="420" src="images/sup_patios.png">
 </p>

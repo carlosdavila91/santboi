@@ -8,7 +8,7 @@ library(gridExtra)
 library(grid)
 library(reshape2)
 
-source("../code/functions.R")
+source("code/functions.R")
 
 # Set the default theme for the sesion ------
 theme_set(theme_light())
@@ -38,7 +38,7 @@ g <- grid.arrange(p + labs(caption="Source: INE, 2019"))
 ggsave("../images/census.png", g)
 
 ## Sant Boi ----------------------------------------------------------------------
-df <- read.csv("../data/1906SB_collection_clean.csv", fileEncoding = "latin1")
+df <- read.csv("data/1906SB_collection_clean.csv", fileEncoding = "latin1")
 
 ## Barrio -----
 p1 <- BarrasPlot_Ordenado(df, df$barrio)
@@ -110,7 +110,7 @@ ggsave("../images/sup_fachadas.png")
 ## Tipo de cubierta ------
 BarrasPlot(df, df$tipo_cubierta) + 
         labs(title = "Type of roof")
-ggsave("../images/cubiertas.png")
+ggsave("images/cubiertas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_cubierta)
 
@@ -124,38 +124,50 @@ ggsave("../images/sup_cubierta.png")
 # ggsave("../images/supl10_cubiertas.png")
 
 ## Tipo de hueco -------
-BarrasPlot(df, df$tipo_hueco)
+BarrasPlot(df, df$tipo_hueco) + 
+        labs(title = "Facade openings")
+ggsave("images/huecos.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_hueco)
 
 ## Sup huecos -------
-Histograma(df, df$sup_huecos)
+Histograma(df, df$sup_huecos) +
+        labs(title = "Histogram of Facade Openings surface")
+ggsave("images/sup_huecos.png")
 # Histograma_Log10(df, df$sup_huecos)
 
 ## Tipo med exp -------
-BarrasPlot(df, df$tipo_med_exp)
+BarrasPlot(df, df$tipo_med_exp) +
+        labs(title = "Types of party walls")
+ggsave("images/medianeras.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_med_exp)
 
 ## Sup med. exp. -------
-Histograma(df, df$sup_median_exp)
+Histograma(df, df$sup_median_exp) + 
+        labs(title = "Histogram of party walls surface")
+ggsave("images/sup_medianeras.png")
 
 ## Sup med no calefactado -------
 # Todos los datos
-Histograma(df, df$sup_med_lnc)
-# Eliminando sup_med_lnc = 0
-aux <- data.frame(df$sup_med_lnc[df$sup_med_lnc != 0])
-colnames(aux) <- "sup_med_lnc_clean"
-Histograma(aux, aux$sup_med_lnc_clean)
-
-length(df$sup_med_lnc) - length(df$sup_med_lnc[df$sup_med_lnc == 0])
+# Histograma(df, df$sup_med_lnc)
+# # Eliminando sup_med_lnc = 0
+# aux <- data.frame(df$sup_med_lnc[df$sup_med_lnc != 0])
+# colnames(aux) <- "sup_med_lnc_clean"
+# Histograma(aux, aux$sup_med_lnc_clean)
+# 
+# length(df$sup_med_lnc) - length(df$sup_med_lnc[df$sup_med_lnc == 0])
 
 ## Superficie en contacto con el terreno -------
-Histograma(df, df$sup_contacto_terreno)
-Histograma_Log10( df, df$sup_contacto_terreno )
+Histograma(df, df$sup_contacto_terreno) +
+        labs(title = "Histogram of surface in contact with the ground")
+ggsave("images/sup_terreno.png")
+# Histograma_Log10( df, df$sup_contacto_terreno )
 ## Superficie de patio -------
-Histograma(df, df$sup_patio)
-Histograma_Log10(df, df$sup_patio)
+Histograma(df, df$sup_patio) +
+        labs(title = "Histogram of surface of courtyard")
+ggsave("images/sup_patios.png")
+# Histograma_Log10(df, df$sup_patio)
 ## Superficie envolvente ------
 # En duda, al ser una variable obtenida a partir de las anteriores
 Histograma(df, df$sup_envolv)
