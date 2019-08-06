@@ -90,13 +90,13 @@ Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings|
   <img width="640" height="420" src="images/plantas.png">
 </p>
 
-1|   2|   3|  4|   5|  6|  7|  8
+1 floor|   2 floors|   3 floors|  4 floors|   5 floors|  6 floors|  7 floors|  8 floors
 ---|---|---|---|---|---|---|---
  67| 204| 107| 84| 207| 84| 50| 11
 
- Min.| 1st Qu.| Median|   Mean| 3rd Qu.| Max.|
-   ---|     ---|    ---|    ---|     ---|  ---|
-     1|       2|      4|   3.82|       5|    8|
+Min.| 1st Qu.| Median|   Mean| 3rd Qu.| Max.|
+ ---|     ---|    ---|    ---|     ---|  ---|
+ 1|       2|      4|   3.82|       5|    8|
 
 ### Use of the ground floor
 
@@ -169,7 +169,7 @@ H1|  H2|  H3|  H4|  H5|
 
 Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
   ---|     ---|    ---|  ---|     ---|  ---|
-    3|      19|     40|   92|      94| 1795|
+3|      19|     40|   92|      94| 1795|
 
 ### Party walls
 #### Types of party walls
@@ -190,7 +190,7 @@ Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
 
 Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
   ---|     ---|    ---|  ---|     ---|  ---|
-    0|       0|     34|   89|     118| 1287|
+0|       0|     34|   89|     118| 1287|
 
 ### Surface in contact with the ground
 
@@ -200,7 +200,7 @@ Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
 
 Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
   ---|     ---|    ---|  ---|     ---|  ---|
-   39|      94|    132|  191|     226| 1405|
+39|      94|    132|  191|     226| 1405|
 
 ### Surface of courtyard
 
@@ -210,4 +210,4 @@ Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
 
 Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
   ---|     ---|    ---|  ---|     ---|  ---|
-    0|       0|     65|  208|     269| 2985|
+0|       0|     65|  208|     269| 2985|
