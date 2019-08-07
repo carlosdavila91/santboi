@@ -102,7 +102,8 @@ TablaResumen_Original(df$tipo_fachada)
 
 ## Superficie de fachadas -------
 Histograma(df, df$sup_fachadas) +
-        labs(title = "Histogram of facades surface")
+        labs(title = "Histogram of facades surface",
+             y = "Density")
 ggsave("images/sup_fachadas.png")
 
 Resumen_Estadistico(df$sup_fachadas)
@@ -120,7 +121,8 @@ TablaResumen_Original(df$tipo_cubierta)
 
 ## Superficie de cubierta -----
 Histograma(df, df$sup_cubierta) +
-        labs(title = "Histogram of Roof Surfaces")
+        labs(title = "Histogram of Roof Surfaces",
+             y = "Density")
 ggsave("images/sup_cubierta.png")
 
 Resumen_Estadistico(df$sup_cubierta)
@@ -136,9 +138,10 @@ ggsave("images/huecos.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_hueco)
 
-## Sup huecos -------
+## Superficie de huecos -------
 Histograma(df, df$sup_huecos) +
-        labs(title = "Histogram of Facade Openings surface")
+        labs(title = "Histogram of Facade Openings surface",
+             y = "Density")
 ggsave("images/sup_huecos.png")
 
 # Histograma_Log10(df, df$sup_huecos)
@@ -154,7 +157,8 @@ TablaResumen_Original(df$tipo_med_exp)
 
 ## Sup med. exp. -------
 Histograma(df, df$sup_median_exp) + 
-        labs(title = "Histogram of party walls surface")
+        labs(title = "Histogram of party walls surface",
+             y = "Density")
 ggsave("images/sup_medianeras.png")
 
 Resumen_Estadistico(df$sup_median_exp)
@@ -171,7 +175,8 @@ Resumen_Estadistico(df$sup_median_exp)
 
 ## Superficie en contacto con el terreno -------
 Histograma(df, df$sup_contacto_terreno) +
-        labs(title = "Histogram of surface in contact with the ground")
+        labs(title = "Histogram of surface in contact with the ground",
+             y = "Density")
 ggsave("images/sup_terreno.png")
 
 Resumen_Estadistico(df$sup_contacto_terreno)
@@ -179,7 +184,8 @@ Resumen_Estadistico(df$sup_contacto_terreno)
 # Histograma_Log10( df, df$sup_contacto_terreno )
 ## Superficie de patio -------
 Histograma(df, df$sup_patio) +
-        labs(title = "Histogram of surface of courtyard")
+        labs(title = "Histogram of surface of courtyard",
+             y = "Density")
 ggsave("images/sup_patios.png")
 
 Resumen_Estadistico(df$sup_patio)
@@ -187,5 +193,8 @@ Resumen_Estadistico(df$sup_patio)
 # Histograma_Log10(df, df$sup_patio)
 ## Superficie envolvente ------
 # En duda, al ser una variable obtenida a partir de las anteriores
-Histograma(df, df$sup_envolv)
+Histograma(df, df$sup_envolv) +
+        labs(title = "Surrounding surface of the building",
+             y = "Density") +
+        scale_y_continuous(labels = fancy_scientific)
 

@@ -28,7 +28,8 @@
       * [Party walls surface](#party-walls-surface)
    * [Surface in contact with the ground](#surface-in-contact-with-the-ground)
    * [Surface of courtyard](#surface-of-courtyard)
-* [Heat Demand Model](#heat-demand-model)
+* [Bivariate Analysis](#bivariate-analysis)
+  * [Heat Demand Model](#heat-demand-model)
 
 ## Introduction
 
@@ -119,7 +120,15 @@ N| S|   E|   W| SE |NE| NW| SW
 ---|---|---|---|---|---|---|---
 134| 131| 109| 106| 98| 86| 79| 71
 
-The most frequent orientations are the four main cardinal points. In terms of Bioclimatic Architectonic criteria, the best ones in this case are SE, SW and S. They can help us use less heating in winter by taking advantage of the sun projecting on the facades of these orientations.
+The most frequent orientations are the four main cardinal points.
+
+Regarding Bioclimatic Architectonic criteria, each orientation has its own pros and cons for this latitude (41º) and the temperate Mediterranean climate:
+
+* SE, S and SW are preferred. Those can help to use less heating in winter by taking the direct sun radiation during practically all day in winter. This radiation can be avoided in summer easily with horizontal sun protections.
+* N, NE and NW does not have the advantage of taking radiation in winter, although they give a nice indirect illumination all the year. NE and NW may produce not desirable radiation in summer during sunrise and sunset. The common strategy to solve this are vertical sun protections.
+* E and W are the less desirable ones. You may have to expend a lot of air conditioning in summer.
+
+These specificities are very relative in an urban environment with buildings located near each other and other elements as trees, that may cast shadows on buildings.
 
 ### Number of dwellings
 
@@ -130,6 +139,8 @@ The most frequent orientations are the four main cardinal points. In terms of Bi
 Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings| From 20 to 39 dwellings| More than 40 dwellings
 ---|---|---|---|---|---
 261|182| 111|155|82|22
+
+This variable should be taken into account in terms of how many people is going to be affected by an intervention in building energy efficiency. From another point of view, it would determine the performance of the operation.
 
 ### Number of floors
 
@@ -166,6 +177,8 @@ F1| F2|  F3
 ---|---|---
  468| 47| 299
 
+Essentially this nomenclature correspond to specific and commmon construction systems in the context of the study. Each has its associated transmittance value.
+
 #### Facade surface
 
 <p align="center">
@@ -175,6 +188,7 @@ F1| F2|  F3
 Min.| 1st Qu.| Median|  Mean| 3rd Qu.|    Max.|
 ---|  ---| ---| ---|  ---|  ---|
  14|   77| 158| 283|  344| 2766|
+
 
 ### Roof
 #### Types of Roofs
@@ -259,8 +273,10 @@ Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
   ---|     ---|    ---|  ---|     ---|  ---|
 0|       0|     65|  208|     269| 2985|
 
-## Heat Demand Model
+## Bivariate Analysis
+
+### Heat Demand Model
 
 With regard to the aim of the study in charge of the university, a physical model was applied to buildings gathered for the investigation.
 
-_Note for my future self: explore heat demand statistical and machine learning models when data is available_ 
+_Note for my future self: explore heat demand statistical and machine learning models when data is available_
