@@ -57,7 +57,7 @@ ggsave("images/decada.png")
 TablaResumen_Original(df$decada)
 
 ## Orientacion -------
-BarrasPlot_Ordenado(df, df$orientacion_ppal) +
+BarrasPlot(df, df$orientacion_ppal) +
         labs(title = "Main orientation of the building")
 ggsave("images/orientacion.png")
 # Tabla resumen
