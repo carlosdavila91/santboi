@@ -198,3 +198,5 @@ Histograma(df, df$sup_envolv) +
              y = "Density") +
         scale_y_continuous(labels = fancy_scientific)
 
+nums <- unlist(lapply(df, is.numeric))  
+df[, nums]

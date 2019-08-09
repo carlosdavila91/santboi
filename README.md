@@ -28,8 +28,6 @@
       * [Party walls surface](#party-walls-surface)
    * [Surface in contact with the ground](#surface-in-contact-with-the-ground)
    * [Surface of courtyard](#surface-of-courtyard)
-* [Bivariate Analysis](#bivariate-analysis)
-  * [Heat Demand Model](#heat-demand-model)
 
 ## Introduction
 
@@ -59,7 +57,7 @@ The Standard requiring builders to use isolation on the walls of buildings came 
 
 This milestone represents a great opportunity today to address one of the main sectors when it comes to Carbon Dioxide emissions.
 
-## Case of Study
+## Case of Study
 
 ### Sant Boi de Llobregat
 
@@ -93,8 +91,6 @@ The study is oriented to the districts of [Marianao](https://www.google.es/maps/
 MARIANAO| VINYETS
 ---- | ----
 499 | 315
-
-After a quick look to the map, we can see that
 
 ### Decade
 
@@ -140,7 +136,9 @@ Detached |From 2 to 4 dwellings| From 5 to 9 dwellings| From 10 to 19 dwellings|
 ---|---|---|---|---|---
 261|182| 111|155|82|22
 
-This variable should be taken into account in terms of how many people is going to be affected by an intervention in building energy efficiency. From another point of view, it would determine the performance of the operation.
+This variable should be taken into account in terms of how many people is going to be affected by a refurbishment oriented to building energy efficiency.
+
+From another point of view, it would determine the ratio "money invested" over "people affected" of the operation. This may take single family households out of the scope of the strategy.
 
 ### Number of floors
 
@@ -156,6 +154,10 @@ Min.| 1st Qu.| Median|   Mean| 3rd Qu.| Max.|
  ---|     ---|    ---|    ---|     ---|  ---|
  1|       2|      4|   3.82|       5|    8|
 
+This variable is, again, one of the most important ones regarding to the investment that will be made in buildings energy efficiency.
+
+It will be clear that single-storey buildings are candidates to stay out of the building renovation strategy.
+
 ### Use of the ground floor
 
 <p align="center">
@@ -165,6 +167,12 @@ Min.| 1st Qu.| Median|   Mean| 3rd Qu.| Max.|
  Dwelling| Commercial| Storage| Industrial
  ---|---|---|---
 400 | 355| 41| 17
+
+Speaking from an energy point of view, is different to have a home than other types of usages in direct contact to your own household.
+
+For example, in winter, when one dwelling is attached to another there won't be a heat exchange between them, as both will be commonly at the same temperature.
+
+When the adjacent space is intended for a different use than this, it is not guaranteed that it is heated continuously, so temperature exchanges may occur.
 
 ### Facade
 #### Type of façade
@@ -177,7 +185,13 @@ F1| F2|  F3
 ---|---|---
  468| 47| 299
 
-Essentially this nomenclature correspond to specific and commmon construction systems in the context of the study. Each has its associated transmittance value.
+Essentially this nomenclature correspond to specific and commmon construction systems in the context of the study.
+
+* F1: Single sheet of brick, thickness of approximately 30 cm.
+* F2: Single sheet of brick, thickness of approximately 15 cm.
+* F3: Facade walls with air chamber of 15/10/5 cm
+
+Each has its associated transmittance value. This physical property affects to the ability of the material system to keep heat or cold inside the home.
 
 #### Facade surface
 
@@ -189,7 +203,6 @@ Min.| 1st Qu.| Median|  Mean| 3rd Qu.|    Max.|
 ---|  ---| ---| ---|  ---|  ---|
  14|   77| 158| 283|  344| 2766|
 
-
 ### Roof
 #### Types of Roofs
 
@@ -200,6 +213,13 @@ Min.| 1st Qu.| Median|  Mean| 3rd Qu.|    Max.|
 C1|  C2|  C3|  C4|
 ---| ---| ---| ---|
 161| 427| 141|  85|
+
+Once again, this variable deals with the transmittance in different cases:
+
+* C1: Ventilated flat roof
+* C2: Non-ventilated flat roof
+* C3: Ventilated sloping roof
+* C4: Non-ventilated sloping roof
 
 #### Roofs surface
 
@@ -222,6 +242,14 @@ H1|  H2|  H3|  H4|  H5|
 ---| ---| ---| ---| ---|
  26|  28| 471| 284|   5|
 
+In this case the different categories are mainly determined by whether or not they have been renewed and whether they have solar protections. Only windows are considered for the aim of this study.
+
+* H1: Windows with no sign of alteration and without solar protections.
+* H2: Renovated windows, without solar protections
+* H3: Windows with no sign of alteration, with solar protections
+* H4: Renovated windows, with solar protections
+* H5: Opaque enclosures: entrance doors, garage doors,...
+
 #### Openings surface
 
 <p align="center">
@@ -242,6 +270,12 @@ Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
 0|  M1|  M2|  M3|
 ---| ---| ---| ---|
 308| 255| 243|   8|
+
+Repeatedly here we describe the transmittance of the party wall with several categories. Those which are protected have an air chamber that decreases the amount of energy transferred to the exterior. This occurs when a specific construction system was founded.
+
+* M1: Unprotected party wall
+* M2: Protected party wall
+* M3: Others
 
 #### Party walls surface
 
@@ -272,11 +306,3 @@ Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
 Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
   ---|     ---|    ---|  ---|     ---|  ---|
 0|       0|     65|  208|     269| 2985|
-
-## Bivariate Analysis
-
-### Heat Demand Model
-
-With regard to the aim of the study in charge of the university, a physical model was applied to buildings gathered for the investigation.
-
-_Note for my future self: explore heat demand statistical and machine learning models when data is available_
