@@ -1,34 +1,5 @@
 # Exploratory Data Analysis
 
-## Table of Contents
-
-* [Case of Study](#case-of-study)
-   * [A little bit of Spanish Construction Sector History](#a-little-bit-of-spanish-construction-sector-history)
-   * [Final Energy Consumption by sector in Spain](#final-energy-consumption-by-sector-in-spain)
-   * [Sant Boi de Llobregat](#sant-boi-de-llobregat)
-   * [Overall aim of the Study](#overall-aim-of-the-study)
-* [Exploratory Data Analysis (EDA) - Univariate Analysis](#exploratory-data-analysis-eda---univariate-analysis)
-   * [District](#district)
-   * [Decade](#decade)
-   * [Orientation of Buildings](#orientation-of-buildings)
-   * [Number of dwellings](#number-of-dwellings)
-   * [Number of floors](#number-of-floors)
-   * [Use of the ground floor](#use-of-the-ground-floor)
-   * [Facade](#facade)
-      * [Type of façade](#type-of-façade)
-      * [Facade surface](#facade-surface)
-   * [Roof](#roof)
-      * [Types of Roofs](#types-of-roofs)
-      * [Roofs surface](#roofs-surface)
-   * [Facade openings](#facade-openings)
-      * [Types of facade openings](#types-of-facade-openings)
-      * [Openings surface](#openings-surface)
-   * [Party walls](#party-walls)
-      * [Types of party walls](#types-of-party-walls)
-      * [Party walls surface](#party-walls-surface)
-   * [Surface in contact with the ground](#surface-in-contact-with-the-ground)
-   * [Surface of courtyard](#surface-of-courtyard)
-
 ## Introduction
 
 ### A little bit of Spanish Construction Sector History
@@ -174,8 +145,7 @@ For example, in winter, when one dwelling is attached to another there won't be 
 
 When the adjacent space is intended for a different use than this, it is not guaranteed that it is heated continuously, so temperature exchanges may occur.
 
-### Facade
-#### Type of façade
+### Type of facade
 
 <p align="center">
   <img width="640" height="420" src="images/fachadas.png">
@@ -193,18 +163,7 @@ Essentially this nomenclature correspond to specific and commmon construction sy
 
 Each has its associated transmittance value. This physical property affects to the ability of the material system to keep heat or cold inside the home.
 
-#### Facade surface
-
-<p align="center">
-  <img width="640" height="420" src="images/sup_fachadas.png">
-</p>
-
-Min.| 1st Qu.| Median|  Mean| 3rd Qu.|    Max.|
----|  ---| ---| ---|  ---|  ---|
- 14|   77| 158| 283|  344| 2766|
-
-### Roof
-#### Types of Roofs
+### Types of Roofs
 
 <p align="center">
   <img width="640" height="420" src="images/cubiertas.png">
@@ -221,18 +180,7 @@ Once again, this variable deals with the transmittance in different cases:
 * C3: Ventilated sloping roof
 * C4: Non-ventilated sloping roof
 
-#### Roofs surface
-
-<p align="center">
-  <img width="640" height="420" src="images/sup_cubierta.png">
-</p>
-
-Min.| 1st Qu.| Median|   Mean| 3rd Qu.| Max.|
----|  ---| ---| ---|  ---|  ---|
- 30|   91| 130| 188|  225| 1367|
-
-### Facade openings
-#### Types of facade openings
+### Types of facade openings
 
 <p align="center">
   <img width="640" height="420" src="images/huecos.png">
@@ -250,18 +198,7 @@ In this case the different categories are mainly determined by whether or not th
 * H4: Renovated windows, with solar protections
 * H5: Opaque enclosures: entrance doors, garage doors,...
 
-#### Openings surface
-
-<p align="center">
-  <img width="640" height="420" src="images/sup_huecos.png">
-</p>
-
-Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
-  ---|     ---|    ---|  ---|     ---|  ---|
-3|      19|     40|   92|      94| 1795|
-
-### Party walls
-#### Types of party walls
+### Types of party walls
 
 <p align="center">
   <img width="640" height="420" src="images/medianeras.png">
@@ -276,33 +213,3 @@ Repeatedly here we describe the transmittance of the party wall with several cat
 * M1: Unprotected party wall
 * M2: Protected party wall
 * M3: Others
-
-#### Party walls surface
-
-<p align="center">
-  <img width="640" height="420" src="images/sup_medianeras.png">
-</p>
-
-Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
-  ---|     ---|    ---|  ---|     ---|  ---|
-0|       0|     34|   89|     118| 1287|
-
-### Surface in contact with the ground
-
-<p align="center">
-  <img width="640" height="420" src="images/sup_terreno.png">
-</p>
-
-Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
-  ---|     ---|    ---|  ---|     ---|  ---|
-39|      94|    132|  191|     226| 1405|
-
-### Surface of courtyard
-
-<p align="center">
-  <img width="640" height="420" src="images/sup_patios.png">
-</p>
-
-Min.| 1st Qu.| Median| Mean| 3rd Qu.| Max.|
-  ---|     ---|    ---|  ---|     ---|  ---|
-0|       0|     65|  208|     269| 2985|
