@@ -1,5 +1,25 @@
 # Exploratory Data Analysis
 
+## Table of contents
+
+* [Introduction](#introduction)
+   * [A little bit of Spanish Construction Sector History](#a-little-bit-of-spanish-construction-sector-history)
+   * [Final Energy Consumption by sector in Spain](#final-energy-consumption-by-sector-in-spain)
+* [Case of Study](#case-of-study)
+   * [Sant Boi de Llobregat](#sant-boi-de-llobregat)
+   * [Overall aim of the Study](#overall-aim-of-the-study)
+* [Exploratory Data Analysis (EDA) - Univariate Analysis](#exploratory-data-analysis-eda---univariate-analysis)
+   * [District](#district)
+   * [Decade](#decade)
+   * [Orientation of Buildings](#orientation-of-buildings)
+   * [Number of dwellings](#number-of-dwellings)
+   * [Number of floors](#number-of-floors)
+   * [Use of the ground floor](#use-of-the-ground-floor)
+   * [Type of facade](#type-of-facade)
+   * [Types of Roofs](#types-of-roofs)
+   * [Types of facade openings](#types-of-facade-openings)
+   * [Types of party walls](#types-of-party-walls)
+         
 ## Introduction
 
 ### A little bit of Spanish Construction Sector History
@@ -121,13 +141,11 @@ From another point of view, it would determine the ratio "money invested" over "
 ---|---|---|---|---|---|---|---
  67| 204| 107| 84| 207| 84| 50| 11
 
-Min.| 1st Qu.| Median|   Mean| 3rd Qu.| Max.|
- ---|     ---|    ---|    ---|     ---|  ---|
- 1|       2|      4|   3.82|       5|    8|
-
 This variable is, again, one of the most important ones regarding to the investment that will be made in buildings energy efficiency.
 
 It will be clear that single-storey buildings are candidates to stay out of the building renovation strategy.
+
+Although it is a numerical variable, it will be considered as a categorical one, due to its ability to distinguish different types of buildings.
 
 ### Use of the ground floor
 
