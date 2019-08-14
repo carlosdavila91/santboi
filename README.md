@@ -19,7 +19,7 @@
    * [Types of Roofs](#types-of-roofs)
    * [Types of facade openings](#types-of-facade-openings)
    * [Types of party walls](#types-of-party-walls)
-         
+
 ## Introduction
 
 ### A little bit of Spanish Construction Sector History
@@ -231,3 +231,9 @@ Repeatedly here we describe the transmittance of the party wall with several cat
 * M1: Unprotected party wall
 * M2: Protected party wall
 * M3: Others
+
+### Continuous variables
+
+<p align="center">
+  <img width="640" height="420" src="images/continuas.png">
+</p>

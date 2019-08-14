@@ -197,3 +197,10 @@ fancy_scientific <- function(l) {
 }
 
 format()
+## Funciones para ggpairs
+my_density <- function(data, mapping, ...) {
+        p <- ggplot(data = data, mapping = mapping) +
+                geom_density(aes(fill = NULL, ...))
+        return(p)
+}
+

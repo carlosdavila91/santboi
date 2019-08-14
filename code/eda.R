@@ -6,6 +6,7 @@ library(plyr)
 library(scales)
 library(gridExtra)
 library(grid)
+library(GGally)
 library(reshape2)
 
 source("code/functions.R")
@@ -100,36 +101,12 @@ ggsave("images/fachadas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_fachada)
 
-## Superficie de fachadas -------
-Histograma(df, df$sup_fachadas) +
-        labs(title = "Histogram of facades surface",
-             y = "Density")
-ggsave("images/sup_fachadas.png")
-
-Resumen_Estadistico(df$sup_fachadas)
-
-# Histograma_Log10(df, df$sup_fachadas) +
-#         labs(title = "Histogram in log10 base of facades surface")
-# ggsave("images/supl10_fachadas.png")
-
 ## Tipo de cubierta ------
 BarrasPlot(df, df$tipo_cubierta) + 
         labs(title = "Type of roof")
 ggsave("images/cubiertas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_cubierta)
-
-## Superficie de cubierta -----
-Histograma(df, df$sup_cubierta) +
-        labs(title = "Histogram of Roof Surfaces",
-             y = "Density")
-ggsave("images/sup_cubierta.png")
-
-Resumen_Estadistico(df$sup_cubierta)
-
-# Histograma_Log10(df, df$sup_cubierta) +
-#         labs(title = "Histogram in log10 base of Roof Surfaces")
-# ggsave("images/supl10_cubiertas.png")
 
 ## Tipo de hueco -------
 BarrasPlot(df, df$tipo_hueco) + 
@@ -138,16 +115,6 @@ ggsave("images/huecos.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_hueco)
 
-## Superficie de huecos -------
-Histograma(df, df$sup_huecos) +
-        labs(title = "Histogram of Facade Openings surface",
-             y = "Density")
-ggsave("images/sup_huecos.png")
-
-# Histograma_Log10(df, df$sup_huecos)
-
-Resumen_Estadistico(df$sup_huecos)
-
 ## Tipo med exp -------
 BarrasPlot(df, df$tipo_med_exp) +
         labs(title = "Types of party walls")
@@ -155,48 +122,36 @@ ggsave("images/medianeras.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_med_exp)
 
-## Sup med. exp. -------
-Histograma(df, df$sup_median_exp) + 
-        labs(title = "Histogram of party walls surface",
-             y = "Density")
-ggsave("images/sup_medianeras.png")
-
-Resumen_Estadistico(df$sup_median_exp)
-
-## Sup med no calefactado -------
-# Todos los datos
-# Histograma(df, df$sup_med_lnc)
-# # Eliminando sup_med_lnc = 0
-# aux <- data.frame(df$sup_med_lnc[df$sup_med_lnc != 0])
-# colnames(aux) <- "sup_med_lnc_clean"
-# Histograma(aux, aux$sup_med_lnc_clean)
-# 
-# length(df$sup_med_lnc) - length(df$sup_med_lnc[df$sup_med_lnc == 0])
-
-## Superficie en contacto con el terreno -------
-Histograma(df, df$sup_contacto_terreno) +
-        labs(title = "Histogram of surface in contact with the ground",
-             y = "Density")
-ggsave("images/sup_terreno.png")
-
-Resumen_Estadistico(df$sup_contacto_terreno)
-
-# Histograma_Log10( df, df$sup_contacto_terreno )
-## Superficie de patio -------
-Histograma(df, df$sup_patio) +
-        labs(title = "Histogram of surface of courtyard",
-             y = "Density")
-ggsave("images/sup_patios.png")
-
-Resumen_Estadistico(df$sup_patio)
-
-# Histograma_Log10(df, df$sup_patio)
-## Superficie envolvente ------
-# En duda, al ser una variable obtenida a partir de las anteriores
-Histograma(df, df$sup_envolv) +
-        labs(title = "Surrounding surface of the building",
-             y = "Density") +
-        scale_y_continuous(labels = fancy_scientific)
-
+## Variables numericas deseables para el plot
 nums <- unlist(lapply(df, is.numeric))  
-df[, nums]
+nums[c("num_plantas", "sup_med_lnc", "sup_envolv",
+       "sup_median_exp", "sup_patio")] <- FALSE
+
+nums[nums == TRUE]
+
+# Calcular coeficientes de correlación antes de hacer el plot para ajustar el tamaño
+# del texto al valor obtenido
+
+ggp <- ggpairs(df[, nums], 
+        
+        # Columns to include into the matrix
+        columnLabels = c("Roof Surface", "Facade Surface", 
+                         "Openings Surface", "Surf. Touching \nthe Ground"),
+        
+        # What to include in the upper triangle
+        # upper = list(continuous = wrap("cor", size = !!!!)),
+        
+        # What to include in the diagonal
+        diag = list(continuous = my_density, 
+                    mapping = aes(color = as.factor(df$num_plantas))),
+        
+        # What to include in the lower triangle
+        lower = list(continuous = "smooth", 
+                     mapping = aes(color = df$barrio, alpha = 0.5))
+        
+        ) +
+        
+        theme(panel.grid.minor = element_line(colour = "white"), 
+              panel.grid.major = element_line(colour = "white"))
+
+ggsave("images/continuas.png", ggp)
