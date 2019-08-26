@@ -190,7 +190,8 @@ p <- ggplot(df,
            color = as.factor(df$num_plantas))) +
         geom_density(show.legend = F) +
         labs(title = "Density Plot of Facade Surface" ,
-             x = "Roof Surface", y = "Density")
+             x = "Roof Surface", y = "Density") +
+        theme(plot.title = element_text(hjust = 0.5))
 
 
 ggsave("images/densidad.png", p)
