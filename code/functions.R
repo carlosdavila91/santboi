@@ -1,5 +1,5 @@
 ## Functions
-
+library(GGally)
 ## Funciones ----------
 ## Tablas resumen ------
 Resumen_Estadistico <- function(indexed_numeric_var){
@@ -195,12 +195,76 @@ fancy_scientific <- function(l) {
         # return this as an expression
         parse(text=l)
 }
-
-format()
-## Funciones para ggpairs
+## Funciones para ggpairs-----
 my_density <- function(data, mapping, ...) {
         p <- ggplot(data = data, mapping = mapping) +
                 geom_density(aes(fill = NULL, ...))
         return(p)
 }
 
+# Custom correlation coefficients 
+my_custom_cor <- function(data, mapping, color = I("grey50"), sizeRange = c(1, 5), ...) {
+        
+        # get the x and y data to use the other code
+        x <- eval(mapping$x, data)
+        y <- eval(mapping$y, data)
+        
+        ct <- cor.test(x,y)
+        sig <- symnum(
+                ct$p.value, corr = FALSE, na = FALSE,
+                cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
+                symbols = c("***", "**", "*", ".", " ")
+        )
+        
+        r <- unname(ct$estimate)
+        rt <- format(r, digits=2)[1]
+        
+        # since we can't print it to get the strsize, just use the max size range
+        cex <- max(sizeRange)
+        
+        # helper function to calculate a useable size
+        percent_of_range <- function(percent, range) {
+                percent * diff(range) + min(range, na.rm = TRUE)
+        }
+        
+        # plot the cor value
+        ggally_text(
+                label = as.character(rt), 
+                mapping = aes(),
+                xP = 0.5, yP = 0.5, 
+                size = I(percent_of_range(cex * abs(r), sizeRange)),
+                color = color,
+                ...
+        ) + 
+                # add the sig stars
+                geom_text(
+                        aes_string(
+                                x = 0.8,
+                                y = 0.8
+                        ),
+                        label = sig, 
+                        size = I(cex),
+                        color = color,
+                        ...
+                ) + 
+                # remove all the background stuff and wrap it with a dashed line
+                theme_classic() + 
+                theme(
+                        panel.background = element_rect(
+                                color = color, 
+                                linetype = "longdash"
+                        ), 
+                        axis.line = element_blank(), 
+                        axis.ticks = element_blank(), 
+                        axis.text.y = element_blank(), 
+                        axis.text.x = element_blank()
+                )
+}
+                
+#Extract Legend
+
+g_legend<-function(a.gplot){
+        tmp <- ggplot_gtable(ggplot_build(a.gplot))
+        leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+        legend <- tmp$grobs[[leg]]
+        return(legend)}

@@ -8,7 +8,7 @@
 * [Case of Study](#case-of-study)
    * [Sant Boi de Llobregat](#sant-boi-de-llobregat)
    * [Overall aim of the Study](#overall-aim-of-the-study)
-* [Exploratory Data Analysis (EDA) - Univariate Analysis](#exploratory-data-analysis-eda---univariate-analysis)
+* [Exploratory Data Analysis (EDA) - Discrete Variables](#exploratory-data-analysis-eda---discrete-variables)
    * [District](#district)
    * [Decade](#decade)
    * [Orientation of Buildings](#orientation-of-buildings)
@@ -19,6 +19,7 @@
    * [Types of Roofs](#types-of-roofs)
    * [Types of facade openings](#types-of-facade-openings)
    * [Types of party walls](#types-of-party-walls)
+* [Exploratory Data Analysis (EDA) - Continuous Variables](#exploratory-data-analysis-eda---continuous-variables)
 
 ## Introduction
 
@@ -69,7 +70,7 @@ The two possible ways to address this problem are the following:
 
 These are items to be taken into account to make a good EDA.
 
-## Exploratory Data Analysis (EDA) - Univariate Analysis
+## Exploratory Data Analysis (EDA) - Discrete Variables
 
 ### District
 
@@ -232,8 +233,21 @@ Repeatedly here we describe the transmittance of the party wall with several cat
 * M2: Protected party wall
 * M3: Others
 
-### Continuous variables
+## Exploratory Data Analysis (EDA) - Continuous Variables
+
+The variables represented in the next multivariate plot (credits for [Barret Schloerke](https://github.com/ggobi/ggally/issues/139#issuecomment-176271618) and ) are the following:
+
+* Roof Surface
+* Facade Surface
+* Openings Surface
+* Surface Touching the Ground
 
 <p align="center">
   <img width="640" height="420" src="images/continuas.png">
 </p>
+
+As we can see, buildings with similar number of heights present similar physical characteristics.
+
+When we distinguish buildings by district there are not clear differences, except that buildings in Marianao may be slightly larger.
+
+All the information gathered here was taken into account in order to reach the aim of the study developed for the Sant Boi de Llobregat City Council.

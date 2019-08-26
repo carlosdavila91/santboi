@@ -131,22 +131,24 @@ nums[nums == TRUE]
 
 # Calcular coeficientes de correlación antes de hacer el plot para ajustar el tamaño
 # del texto al valor obtenido
+data_corr <- cor(df[nums == T])
 
+# Multiplot
 ggp <- ggpairs(df[, nums], 
         
         # Columns to include into the matrix
         columnLabels = c("Roof Surface", "Facade Surface", 
-                         "Openings Surface", "Surf. Touching \nthe Ground"),
+                         "Openings \nSurface", "Surf. Touching \nthe Ground"),
         
         # What to include in the upper triangle
-        # upper = list(continuous = wrap("cor", size = !!!!)),
+        upper = list(my_custom_cor),
         
         # What to include in the diagonal
         diag = list(continuous = my_density, 
                     mapping = aes(color = as.factor(df$num_plantas))),
         
         # What to include in the lower triangle
-        lower = list(continuous = "smooth", 
+        lower = list(continuous = "points", 
                      mapping = aes(color = df$barrio, alpha = 0.5))
         
         ) +
@@ -154,4 +156,29 @@ ggp <- ggpairs(df[, nums],
         theme(panel.grid.minor = element_line(colour = "white"), 
               panel.grid.major = element_line(colour = "white"))
 
-ggsave("images/continuas.png", ggp)
+# Extract the necesary legends
+diag_legend <- g_legend(ggplot(df, 
+                               aes(x = sup_fachadas, 
+                                   y = ..density..,
+                                   color = as.factor(df$num_plantas))) +
+                                geom_density() +
+                                guides (color = guide_legend(title = "Number \nof Floors")) +
+                                theme(legend.title = element_text(face = "bold"),
+                                      plot.margin=unit(c(1,-0.5,1,1), "cm")))
+
+low_legend <- g_legend(ggplot(df,
+                              aes(x = sup_fachadas, 
+                                  y = sup_cubierta,
+                                  color = barrio)) +
+                                      geom_point() +
+                               guides (color = guide_legend(title = "District")) +
+                               theme(legend.position = "top",
+                                     legend.title = element_text(face = "bold")))
+        
+
+g <- grid.grabExpr(print(ggp))
+
+pf <- grid.arrange(g, diag_legend, low_legend, nrow = 2, heights = c(9,1),
+                   widths = c(0.9,0.1))
+
+ggsave("images/continuas.png", pf)
