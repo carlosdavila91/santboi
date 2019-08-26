@@ -235,7 +235,7 @@ Repeatedly here we describe the transmittance of the party wall with several cat
 
 ## Exploratory Data Analysis (EDA) - Continuous Variables
 
-The variables represented in the next multivariate plot (credits for [Barret Schloerke](https://github.com/ggobi/ggally/issues/139#issuecomment-176271618) and ) are the following:
+The variables represented in the next multivariate plot (credits for [Barret Schloerke](https://github.com/ggobi/ggally/issues/139#issuecomment-176271618) and [user20650](https://stackoverflow.com/a/34517880/11597692)) are the following:
 
 * Roof Surface
 * Facade Surface
@@ -252,7 +252,7 @@ As we can see, buildings with similar number of heights present similar physical
   <img width="640" height="420" src="images/densidad.png">
 </p>
 
-Strong correlations appear between these physical characteristics of buidings.
+Strong correlations appear between these physical characteristics of buildings.
 
 When we distinguish buildings by district there are not clear differences, except that buildings in Marianao may be slightly larger.
 
