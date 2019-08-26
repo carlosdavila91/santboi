@@ -261,8 +261,7 @@ my_custom_cor <- function(data, mapping, color = I("grey50"), sizeRange = c(1, 5
                 )
 }
                 
-#Extract Legend
-
+#Extract plot Legend
 g_legend<-function(a.gplot){
         tmp <- ggplot_gtable(ggplot_build(a.gplot))
         leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
