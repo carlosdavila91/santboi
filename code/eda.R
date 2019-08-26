@@ -182,3 +182,14 @@ pf <- grid.arrange(g, diag_legend, low_legend, nrow = 2, heights = c(9,1),
                    widths = c(0.9,0.1))
 
 ggsave("images/continuas.png", pf)
+
+## Two plots as examples
+p <- ggplot(df, 
+       aes(x = sup_cubierta, 
+           y = ..density..,
+           color = as.factor(df$num_plantas))) +
+        geom_density(show.legend = F) +
+        labs(x = "Roof Surface", y = "Density")
+
+
+ggsave("images/densidad.png", p)

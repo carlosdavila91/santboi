@@ -248,6 +248,12 @@ The variables represented in the next multivariate plot (credits for [Barret Sch
 
 As we can see, buildings with similar number of heights present similar physical characteristics.
 
+<p align="center">
+  <img width="640" height="420" src="images/densidad.png">
+</p>
+
+Strong correlations appear between these physical characteristics of buidings.
+
 When we distinguish buildings by district there are not clear differences, except that buildings in Marianao may be slightly larger.
 
 All the information gathered here was taken into account in order to reach the aim of the study developed for the Sant Boi de Llobregat City Council.
