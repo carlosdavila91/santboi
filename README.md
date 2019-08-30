@@ -181,7 +181,7 @@ Essentially this nomenclature correspond to specific and commmon construction sy
 * F3: Facade walls with air chamber of 15/10/5 cm
 
 <p align="center">
-  <img width="640" height="420" src="images/Facades.png">
+  <img width="640" height="260" src="images/Facades.png">
 </p>
 
 Each has its associated transmittance value. This physical property affects to the ability of the material system to keep heat or cold inside the home. This is the intuition under the following variables which classify other physical elements of buildings.
