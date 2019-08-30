@@ -1,5 +1,4 @@
 ## Setup ------
-rm(list = ls(all = T))
 library(readxl)
 library(tidyverse)
 library(plyr)
@@ -13,15 +12,18 @@ source("code/functions.R")
 
 # Set the default theme for the sesion ------
 theme_set(theme_light())
+
 ## Censo de viviendas en españa --------------------------------------------------
 censo <- read.csv("data/clean_censo_2011.csv")
 colnames(censo) <- gsub("\\.", "\\ ", colnames(censo))
 
-censo$Decade <- factor(censo$Decade, levels = c("Before 1900", "1900-1920","1921-1940",
-                                            "1941-1950", "1951-1960", "1961-1970",
-                                            "1971-1980", "1981-1990", "1991-2001",
-                                            "2002-2011"))
-
+censo$Decade <- factor(
+        censo$Decade, levels = c("Before 1900", "1900-1920","1921-1940",
+                                 "1941-1950", "1951-1960", "1961-1970",
+                                 "1971-1980", "1981-1990", "1991-2001",
+                                 "2002-2011")
+)
+        
 colourCount = length(unique(censo$Decade))
 getPalette = colorRampPalette(RColorBrewer::brewer.pal(9, "YlGnBu"))
 
@@ -31,12 +33,14 @@ p <- ggplot(censo, aes(x = Decade, y = Registered)) +
         guides(fill = FALSE) +
         scale_y_continuous(labels = fancy_scientific)
 
-p <- p + theme (axis.text.x = element_text(angle = 45, vjust = 0.5),
-           plot.title = element_text(hjust = 0.5))
+p <- p + theme(
+        axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1),
+        plot.title = element_text(hjust = 0.5)
+)
 
-g <- grid.arrange(p + labs(caption="Source: INE, 2019"))
+p <- grid.arrange(p + labs(caption="Source: INE, 2019"))
 
-ggsave("images/census.png", g)
+ggsave("images/census.png", p)
 
 ## Sant Boi ----------------------------------------------------------------------
 df <- read.csv("data/1906SB_collection_clean.csv", fileEncoding = "latin1")
@@ -123,18 +127,14 @@ ggsave("images/medianeras.png")
 TablaResumen_Original(df$tipo_med_exp)
 
 ## Variables numericas deseables para el plot
-nums <- unlist(lapply(df, is.numeric))  
-nums[c("num_plantas", "sup_med_lnc", "sup_envolv",
-       "sup_median_exp", "sup_patio")] <- FALSE
+nums <- unlist(purrr::map(df, is.numeric))  
+nums[c("anyo", "num_plantas", "sup_med_lnc", "sup_envol",
+       "sup_median_exp", "sup_patio", "num_viviendas")] <- FALSE
 
 nums[nums == TRUE]
 
-# Calcular coeficientes de correlación antes de hacer el plot para ajustar el tamaño
-# del texto al valor obtenido
-data_corr <- cor(df[nums == T])
-
 # Multiplot
-ggp <- ggpairs(df[, nums], 
+ggp <- ggpairs(df[,nums], 
         
         # Columns to include into the matrix
         columnLabels = c("Roof Surface", "Facade Surface", 
@@ -183,7 +183,7 @@ pf <- grid.arrange(g, diag_legend, low_legend, nrow = 2, heights = c(9,1),
 
 ggsave("images/continuas.png", pf)
 
-## Two plots as examples
+## Plot as example
 p <- ggplot(df, 
        aes(x = sup_cubierta, 
            y = ..density..,
@@ -191,6 +191,7 @@ p <- ggplot(df,
         geom_density(show.legend = F) +
         labs(title = "Density Plot of Facade Surface" ,
              x = "Roof Surface", y = "Density") +
+        guides (color = guide_legend(title = "Number \nof Floors")) +
         theme(plot.title = element_text(hjust = 0.5))
 
 

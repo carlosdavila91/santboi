@@ -1,10 +1,14 @@
 .DS_Store
-.csv
-.xlsx
 .RData
 .Rhistory
-.Rproj
 .Rproj.user
+
+.csv
+.xlsx
+.png
+
+santboi.Rproj
+gh-md-toc
 
 data
 R
