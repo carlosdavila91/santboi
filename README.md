@@ -180,9 +180,13 @@ Essentially this nomenclature correspond to specific and commmon construction sy
 * F2: Single sheet of brick, thickness of approximately 15 cm.
 * F3: Facade walls with air chamber of 15/10/5 cm
 
-Each has its associated transmittance value. This physical property affects to the ability of the material system to keep heat or cold inside the home.
+<p align="center">
+  <img width="640" height="420" src="images/Facades.png">
+</p>
 
-### Types of Roofs
+Each has its associated transmittance value. This physical property affects to the ability of the material system to keep heat or cold inside the home. This is the intuition under the following variables which classify other physical elements of buildings.
+
+### Types of Roof
 
 <p align="center">
   <img width="640" height="420" src="images/cubiertas.png">
@@ -199,7 +203,7 @@ Once again, this variable deals with the transmittance in different cases:
 * C3: Ventilated sloping roof
 * C4: Non-ventilated sloping roof
 
-### Types of facade openings
+### Types of facade opening
 
 <p align="center">
   <img width="640" height="420" src="images/huecos.png">
@@ -217,7 +221,7 @@ In this case the different categories are mainly determined by whether or not th
 * H4: Renovated windows, with solar protections
 * H5: Opaque enclosures: entrance doors, garage doors,...
 
-### Types of party walls
+### Types of party wall
 
 <p align="center">
   <img width="640" height="420" src="images/medianeras.png">
