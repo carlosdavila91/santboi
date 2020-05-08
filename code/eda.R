@@ -62,9 +62,9 @@ ggsave("images/decada.png")
 TablaResumen_Original(df$decada)
 
 ## Orientacion -------
-BarrasPlot(df, df$orientacion_ppal) +
-        labs(title = "Main orientation of the building")
-ggsave("images/orientacion.png")
+BarrasPlot(df, df$orientacion_ppal)
+        + labs(title = "Main orientation of the building")
+        + ggsave("images/orientacion.png")
 # Tabla resumen
 TablaResumen_Decreciente(df$orientacion_ppal)
 
@@ -75,16 +75,16 @@ df$num_viviendas_class <- factor(df$num_viviendas_class, levels = c("Detached",
                                                                     "From 10 to 19 dwellings",
                                                                     "From 20 to 39 dwellings",
                                                                     "More than 40 dwellings"))
-BarrasPlot(df, df$num_viviendas_class) +
-        labs(title = "Number of Dwellings")
-ggsave("images/viviendas.png")
+BarrasPlot(df, df$num_viviendas_class)
+        + labs(title = "Number of Dwellings")
+        + ggsave("images/viviendas.png")
 # Tabla resumen
 TablaResumen_Original(df$num_viviendas_class)
 
 ## Num. de plantas ------
-BarrasPlot(df, as.factor(df$num_plantas)) +
-        labs(title = "Number of floors")
-ggsave("images/plantas.png")
+BarrasPlot(df, as.factor(df$num_plantas))
+        + labs(title = "Number of floors")
+        + ggsave("images/plantas.png")
 
 # Tabla resumen
 TablaResumen_Original(as.factor(df$num_plantas))
@@ -92,37 +92,37 @@ TablaResumen_Original(as.factor(df$num_plantas))
 Resumen_Estadistico(df$num_plantas)
 
 ## Uso planta baja ---------
-p <- BarrasPlot_Ordenado(df, df$uso_pb)
-p + labs(title = "Use of the ground floor")
-ggsave("images/pbaja.png")
+BarrasPlot_Ordenado(df, df$uso_pb)
+        + labs(title = "Use of the ground floor")
+        + ggsave("images/pbaja.png")
 # Tabla resumen
 TablaResumen_Decreciente(df$uso_pb)
 
 ## Tipo de fachada --------
-p <- BarrasPlot(df, df$tipo_fachada)
-p + labs(title = "Type of facade")
-ggsave("images/fachadas.png")
+BarrasPlot(df, df$tipo_fachada)
+        + labs(title = "Type of facade")
+        + ggsave("images/fachadas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_fachada)
 
 ## Tipo de cubierta ------
-BarrasPlot(df, df$tipo_cubierta) + 
-        labs(title = "Type of roof")
-ggsave("images/cubiertas.png")
+BarrasPlot(df, df$tipo_cubierta)
+        + labs(title = "Type of roof")
+        + ggsave("images/cubiertas.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_cubierta)
 
 ## Tipo de hueco -------
-BarrasPlot(df, df$tipo_hueco) + 
-        labs(title = "Facade openings")
-ggsave("images/huecos.png")
+BarrasPlot(df, df$tipo_hueco)
+        + labs(title = "Facade openings")
+        + ggsave("images/huecos.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_hueco)
 
 ## Tipo med exp -------
-BarrasPlot(df, df$tipo_med_exp) +
-        labs(title = "Types of party walls")
-ggsave("images/medianeras.png")
+BarrasPlot(df, df$tipo_med_exp)
+        + labs(title = "Types of party walls")
+        + ggsave("images/medianeras.png")
 # Tabla resumen
 TablaResumen_Original(df$tipo_med_exp)
 
